@@ -22,13 +22,11 @@ class MainActivity : AppCompatActivity() {
         Child2.opened = "hi"
         */
 
-        var listNum = mutableListOf(5,3,7,2,6,1,4)
-        var indexNum = 7
+        var listNum = mutableListOf(7,7,3,5,2,6,1,4)
+        var indexNum = 8
         var d = 1
         while (d < indexNum) {
-
-
-            for (a in 0..(indexNum - 2)) {
+            for (a in 0..(indexNum - d -1)) {
                 if (listNum[a] > listNum[a + 1]) {
                     var b = listNum[a]
                     var c = listNum[a + 1]
@@ -39,10 +37,7 @@ class MainActivity : AppCompatActivity() {
                         print(listNum[d])
                     }
                     println()
-
-
                 }
-
             }
             d += 1
         }
