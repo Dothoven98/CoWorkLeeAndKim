@@ -9,6 +9,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
+
         testStringExtension()
 
 
@@ -18,33 +20,72 @@ class MainActivity : AppCompatActivity() {
         Child2.answered()
         BaseClass2().answered()
         Child2.opened = "hi"
+        */
+
+        var listNum = mutableListOf(5,3,7,2,6,1,4)
+        var indexNum = 7
+        var d = 1
+        while (d < indexNum) {
 
 
+            for (a in 0..(indexNum - 2)) {
+                if (listNum[a] > listNum[a + 1]) {
+                    var b = listNum[a]
+                    var c = listNum[a + 1]
+                    listNum[a] = c
+                    listNum[a + 1] = b
 
-
-
-            val num = 3
-
-            for (a in 1..num) {
-                var arraystars = Array(a, { item -> ""})
-                for (b in 1..a) {
-                    var b = b - 1
-                    arraystars[b] = "*"
-                    var eachstars = arraystars[b]
-                    print(eachstars)
+                    for (d in 0..(indexNum - 1)) {
+                        print(listNum[d])
+                    }
+                    println()
 
 
                 }
 
             }
+            d += 1
+        }
+        for (d in 0..(indexNum - 1)) {
+            print(listNum[d])
+        }
+        println("~~")
 
+
+/*
+        for (d in 0..(indexNum - 1)) {
+            print(listNum[d])
+        }
+        println()
+*/
+
+
+
+/*
+        val num = 3
+
+        for (a in 1..num) {
+            var arraystars = Array(a, { item -> "" })
+            for (b in 1..a) {
+                var b = b - 1
+                arraystars[b] = "*"
+                var eachstars = arraystars[b]
+                print(eachstars)
+
+
+            }
+            println()
 
         }
 
+*/
     }
+}
+
+
 
     // String 익스텐션 테스트
-
+/*
     fun testStringExtension() {
         var original = "Hello"
         var added = "Guys~"
@@ -69,7 +110,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("Extension", "${opened}")
         }
     }
-
+*/
 
 
 
